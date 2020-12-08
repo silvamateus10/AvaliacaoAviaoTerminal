@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AvaliacaoCodeIT
 {
-    class Aviao
+    class Aviao 
     {
 
         static  List<string> aviaoList = new List<string>();
@@ -27,10 +27,17 @@ namespace AvaliacaoCodeIT
             Console.WriteLine("");
             Console.WriteLine("======Pessoas no Avião=======");
             Console.WriteLine("========================");
-            foreach (string pessoa in aviaoList)
+            if (aviaoList.Count == 0)
             {
-                Console.WriteLine(pessoa);
+                Console.WriteLine("Ninguém está no Avião");
             }
+            else
+            {
+                foreach (string pessoa in aviaoList)
+                {
+                    Console.WriteLine(pessoa);
+                }
+            }            
             Console.WriteLine("========================");
             Console.WriteLine("");
             Console.WriteLine("");

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AvaliacaoCodeIT
 {
-    class Terminal
+    class Terminal 
     {
         static List<string> terminalList = new List<string>();
 
@@ -15,6 +15,7 @@ namespace AvaliacaoCodeIT
             {
                 terminalList.Add(pessoa.descricao);
             }
+
 
         }
 
@@ -31,16 +32,24 @@ namespace AvaliacaoCodeIT
             terminalList.Remove(pessoas[index_pessoa].descricao);
 
         }
-
+        
         public void ListaTerminal()
         {
             Console.WriteLine("");
             Console.WriteLine("======Pessoas no Terminal=======");
             Console.WriteLine("========================");
-            foreach (string pessoa in terminalList)
+            if (terminalList.Count == 0)
             {
-                Console.WriteLine(pessoa);
+                Console.WriteLine("Ninguém está no Terminal");
             }
+            else 
+            {
+                foreach (string pessoa in terminalList)
+                {
+                    Console.WriteLine(pessoa);
+                }
+            }
+          
             Console.WriteLine("========================");
             Console.WriteLine("");
             Console.WriteLine("");
